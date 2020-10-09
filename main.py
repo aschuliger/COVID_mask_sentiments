@@ -7,13 +7,14 @@ import json
 import os
 import TwitterAPI
 
-api = TwitterAPI.TwitterAPI('COjeauC1T6JGito94EV8xbbkL', 'IBTZMVYXmMcUZ5RIi9tjLI7Gd4ybYiLA4mp44XZAdBwQkOMbz6')
+api = TwitterAPI.TwitterAPI()
 
 # Saving credentials to a json file
 filename = "twitter_credentials.json"
 if not os.path.exists(filename):
     api.create_credential_file
 
+results = api.retrieve_tweets()
 
 
 def print_hi(name):
